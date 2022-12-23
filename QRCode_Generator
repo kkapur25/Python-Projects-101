@@ -1,0 +1,10 @@
+import pyqrcode 
+from pyqrcode import QRCode 
+import png
+
+s = input("Enter the url of which you want the QR code to be created")
+
+url = pyqrcode.create(s) 
+
+url.svg("code.svg", scale = 8) 
+url.png('code.png', scale=6, module_color=[0, 0, 0, 128], background=[0xff, 0xff, 0xcc])
